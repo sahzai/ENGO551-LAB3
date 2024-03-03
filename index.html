@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Building Permits Map</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+    <!-- Include Leaflet.markercluster CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/MarkerCluster.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/MarkerCluster.Default.css">
+    <style>
+        #map {
+            height: 400px;
+            margin-bottom: 20px;
+        }
+        #datePickerStart, #datePickerEnd {
+            margin-right: 10px;
+        }
+        
+        /* Custom marker cluster icon styles */
+.custom-cluster-1 {
+  background-color: #ff6347; /* Tomato */
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+}
+
+.custom-cluster-2 {
+  background-color: #4682b4; /* Steel Blue */
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+}
+
+.custom-cluster-3 {
+  background-color: #ff69b4; /* Hot Pink */
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 60px;
+}
+
+/* Custom marker icon styles */
+.custom-marker-icon {
+  background-color: #32cd32; /* Lime Green */
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 30px;
+}
+
+/* Popup styles */
+.leaflet-popup-content-wrapper {
+  background-color: white;
+  color: #333333;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.leaflet-popup-content {
+  max-width: 200px;
+}
+
+
+
+    </style>
+</head>
+<body>
+    <div>
+        <label for="datePickerStart">Start Date:</label>
+        <input type="date" id="datePickerStart">
+        <label for="datePickerEnd">End Date:</label>
+        <input type="date" id="datePickerEnd">
+        <button onclick="getDataAndAddToMap()">Show Permits</button>
+    </div>
+
+    <div id="map"></div>
+    
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <!-- Include Leaflet.markercluster JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/leaflet.markercluster.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
